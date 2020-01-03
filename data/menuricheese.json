@@ -1,0 +1,46 @@
+{
+    "menu" : [
+        {
+            "category" : "ala carte",
+            "name" : "Fire Chicken Bite 3pcs",
+            "description" : "3 potong ayam goreng dengan dibalus saus BBQ, disajikan dengan cheese sause yang lezat.",
+            "price" : 25000,
+            "picture" : "fire-chicken-bite-3-pcs.jpg"
+        },
+        {
+            "category" : "ala carte",
+            "name" : "Richicken 4pcs",
+            "description" : "4 potong ayam goreng yang gurih dan lezat paling pas untuk mengganjal perut.",
+            "price" : 76000,
+            "picture" : "richicken-4-pcs.jpg"
+        },
+        {
+            "category" : "ala carte",
+            "name" : "Fire Chicken 4pcs",
+            "description" : "4 potong ayam goreng dengan dibalut saus BBQ, disajikan dengan cheese sauce yang lezat",
+            "price" : 82500,
+            "picture" : "fire-chicken-4-pcs.jpg"
+        },
+        {
+            "category" : "combo favorite",
+            "name" : "Combo 4pcs Fire Wings",
+            "description" : "4 potong ayam goreng potongan sayap dibalut dengan saus BBQ dengan pilihan level 0 s.d level 5.",
+            "price" : 42000,
+            "picture" : "combo-4-pcs-fire-wings.jpg"
+        },
+        {
+            "category" : "combo favorite",
+            "name" : "Combo Duo Fire Chicken",
+            "description" : "1 nasi + 2 fire chicken + cheese sauce + minuman BBQ dengan pilihan level 0 s.d level 5.",
+            "price" : 58000,
+            "picture" : "combo-duo-fire-chicken.jpg"
+        },
+        {
+            "category" : "combo favorite",
+            "name" : "Combo 3pcs Fire Chicken Bite",
+            "description" : "3 potong ayam goreng potongan bites dibalut saus BBQ dengan pilihan level 0 s.d level 5.",
+            "price" : 42000,
+            "picture": "combo-3-pcs-fire-chicken-bite.jpg"
+        }
+    ]
+}
