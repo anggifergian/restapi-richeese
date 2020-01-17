@@ -31,7 +31,9 @@ function searchMovie() {
                                 <div class="card-body">
                                     <h5 class="card-title">` + value.Title + `</h5>
                                     <h6 class="card-subtitle mb-2 text-muted">` + value.Year + `</h6>
-                                    <a href="#" class="btn btn-outline-primary">See Detail</a>
+                                    <button type="button" class="btn btn-outline-primary see-detail" data-toggle="modal" data-target="#modalDetail" data-id="` + value.imdbID + `">
+                                        See Detail
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -59,3 +61,40 @@ $('#inputSearch').on('keyup', function (e) {
         searchMovie();
     }
 });
+
+//when listMenu button click, the elemen see-detial would do the function
+$('#listMenu').on('click', '.see-detail', function () {
+    // console.log($(this).data('id'));
+
+    $.ajax({
+        url: "http://omdbapi.com",
+        type: "get",
+        dataType: "json",
+        data: {
+            "apiKey": "33ceecd2",
+            "i": $(this).data('id')
+        },
+        success: function (movie) {
+            if (movie.Response == "True") {
+                $('.modal-body').html(`
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="` + movie.Poster + `" class="img-fluid">
+                        </div>
+                        <div class="col-md-8">
+                            <ul class="list-group">
+                                <li class="list-group-item"><h3>` + movie.Title + `</h3></li>
+                                <li class="list-group-item">Released ` + movie.Released + `</li>
+                                <li class="list-group-item">Genre ` + movie.Genre + `</li>
+                                <li class="list-group-item">Director ` + movie.Director + `</li>
+                                <li class="list-group-item">Actors ` + movie.Actors + `</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                `);
+            }
+        }
+    })
+})
